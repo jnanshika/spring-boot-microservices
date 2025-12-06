@@ -1,0 +1,72 @@
+[
+  {
+    "id": "123e4567-e89b-12d3-a456-426614174001",
+    "name": "Ritika Malhotra",
+    "email": "ritika.malhotra@example.com",
+    "address": "Pune, India",
+    "dateOfBirth": "1994-12-17"
+  },
+  {
+    "id": "123e4567-e89b-12d3-a456-426614174002",
+    "name": "Arjun Patel",
+    "email": "arjun.patel@example.com",
+    "address": "Ahmedabad, India",
+    "dateOfBirth": "1991-03-03"
+  },
+  {
+    "id": "123e4567-e89b-12d3-a456-426614174003",
+    "name": "Meera Nair",
+    "email": "meera.nair@example.com",
+    "address": "Kochi, India",
+    "dateOfBirth": "1996-06-18"
+  },
+  {
+    "id": "123e4567-e89b-12d3-a456-426614174004",
+    "name": "Sahil Khan",
+    "email": "sahil.khan@example.com",
+    "address": "Hyderabad, India",
+    "dateOfBirth": "1993-04-22"
+  },
+  {
+    "id": "a1f1c2d3-4b55-4c9e-9d10-112233445501",
+    "name": "Aarav Sharma",
+    "email": "aarav.sharma@example.com",
+    "address": "New Delhi, India",
+    "dateOfBirth": "1995-03-12"
+  },
+  {
+    "id": "b2a2d3e4-5c66-4d1f-8e11-112233445502",
+    "name": "Vanshika Jain",
+    "email": "vanshika.jain@example.com",
+    "address": "Rohini, Delhi",
+    "dateOfBirth": "1998-07-25"
+  },
+  {
+    "id": "c3b3e4f5-6d77-4e2a-9f12-112233445503",
+    "name": "Rohan Verma",
+    "email": "rohan.verma@example.com",
+    "address": "Mumbai, India",
+    "dateOfBirth": "1992-11-05"
+  },
+  {
+    "id": "d4c4f5a6-7e88-4f3b-a013-112233445504",
+    "name": "Ishita Gupta",
+    "email": "ishita.gupta@example.com",
+    "address": "Kolkata, India",
+    "dateOfBirth": "2000-02-19"
+  },
+  {
+    "id": "e5d5a6b7-8f99-4a4c-b214-112233445505",
+    "name": "Kabir Mehra",
+    "email": "kabir.mehra@example.com",
+    "address": "Bengaluru, India",
+    "dateOfBirth": "1997-09-09"
+  },
+  {
+    "id": "f6e6b7c8-9a00-4b5d-c315-112233445506",
+    "name": "Ananya Singh",
+    "email": "ananya.singh@example.com",
+    "address": "Chennai, India",
+    "dateOfBirth": "1999-05-30"
+  }
+]
