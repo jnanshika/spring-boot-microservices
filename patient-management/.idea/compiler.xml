@@ -9,6 +9,7 @@
         <module name="api-gateway" />
         <module name="patient-service" />
         <module name="auth-service" />
+        <module name="integration-tests" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
