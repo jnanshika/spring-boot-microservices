@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+//split file into multiple files
+option java_multiple_files = true;
+option java_package = "billing";
+
+//define billing service
+service BillingService{
+  rpc CreateBillingAccount(BillingRequest) returns (BillingResponse);
+}
+
+//define requests - similar to java object or DTO (properties present in requests)
+message BillingRequest{
+  string patientId = 1; //numbers need to be unique
+  string name = 2;
+  string email = 3;
+}
+
+//properties present in response
+message BillingResponse{
+  string accountId = 1;
+  string status = 2;
+}

@@ -1,4 +1,32 @@
-GET http://localhost:4004/api/patients
+POST http://localhost:4000/patients
+Content-Type: application/json
+Content-Length: 183
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "John Jack with billing account",
+  "email": "JohnJack_BA@example.com",
+  "address": "123 main street22",
+  "dateOfBirth": "1995-09-09",
+  "registeredDate": "2024-11-28"
+}
+
+<> 2025-12-14T093231.200.json
+
+###
+
+GET http://localhost:4000/patients
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-12-14T093141.200.json
+
+###
+
+GRPC localhost:9001/BillingService/CreateBillingAccountGRPC localhost:9001/BillingService/CreateBillingAccountGET http://localhost:4004/api/patients
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlckB0ZXN0LmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2NTM2MDk0OSwiZXhwIjoxNzY1Mzk2OTQ5fQ.mq6U-rc-zStYYkXR1mm-YDFZNsAHsPwXcxKl_oesc-4
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.5
 Accept-Encoding: br, deflate, gzip, x-gzip
@@ -657,42 +685,6 @@ Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
 <> 2025-12-07T223637.200.json
-
-###
-
-PUT http://localhost:4000/patients/a1f1c2d3-4b55-4c9e-9d10-112233445501
-Content-Type: application/json
-Content-Length: 90
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "name": "John Doe",
-
-  "address": "123 main street22",
-  "dateOfBirth": "1995-09-09"
-}
-
-<> 2025-12-06T090126.400.json
-
-###
-
-PUT http://localhost:4000/patients/a1f1c2d3-4b55-4c9e-9d10-112233445501
-Content-Type: application/json
-Content-Length: 92
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "name": "John Doe",
-
-  "address": "123 main street22",
-  "dateOfBirth": "1995-09-09"
-}
-
-<> 2025-12-06T090047.400.json
 
 ###
 
