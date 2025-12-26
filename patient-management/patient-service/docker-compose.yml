@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  patient-service-db:
+    image: postgres:16
+    container_name: patient-service-db
+    environment:
+      POSTGRES_DB: patientdb
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+    volumes:
+      - patient-db-data:/var/lib/postgresql/data
+    ports:
+      - "5000:5432"
+    networks:
+      - internal
+
+  patient-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: patient-service:latest
+    container_name: patient-service
+    depends_on:
+      - patient-service-db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://patient-service-db:5432/patientdb
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_SQL_INIT_MODE: always
+
+      BILLING_SERVICE_ADDRESS: billing-service
+      BILLING_SERVICE_GRPC_PORT: 9001
+    ports:
+      - "4005:4005"
+    networks:
+      - internal
+
+volumes:
+  patient-db-data:
+
+networks:
+  internal:
+    driver: bridge

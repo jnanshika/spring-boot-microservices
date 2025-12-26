@@ -3,6 +3,8 @@ import io.restassured.response.Response;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
+
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
@@ -70,7 +72,7 @@ public class PatientIntegrationTest {
                         .body("""
                         {
                             "name": "Jack Doe",
-                            "email": "jackdoe.test@ex.com",
+                            "email": "jackdoe7.test@ex.com",
                             "address": "Delhi",
                             "dateOfBirth": "1990-05-10",
                             "registeredDate": "2024-01-01"
@@ -120,12 +122,13 @@ public class PatientIntegrationTest {
                         .contentType("application/json")
                         .body("""
                         {
-                            "name": "Old Name",
+                            "name": "Updated Name",
                             "email": "update.test@ex.com",
-                            "address": "Delhi",
+                            "address": "Delhi Updated",
                             "dateOfBirth": "1995-03-10",
                             "registeredDate": "2024-01-01"
                         }
+                        
                         """)
                         .when()
                         .post("/api/patients")
@@ -141,9 +144,9 @@ public class PatientIntegrationTest {
                 .contentType("application/json")
                 .body("""
                 {
-                    "name": "Updated Name",
+                    "name": "Old Name",
                     "email": "update.test@ex.com",
-                    "address": "Delhi Updated",
+                    "address": "Delhi",
                     "dateOfBirth": "1995-03-10",
                     "registeredDate": "2024-01-01"
                 }
@@ -189,7 +192,6 @@ public class PatientIntegrationTest {
                 .then()
                 .statusCode(204);
     }
-
 
 
 }

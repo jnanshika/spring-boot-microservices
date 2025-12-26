@@ -1,0 +1,4 @@
+### GET request to example server
+GET http://localhost:4006/auth/google/callback?code=4/0ATX87lMrz2kpkr_7g3kKCspiuaqD0592JlJ_9iQj3MENOesjj_bPFUOl8jOAXADVmKyFfg
+
+###
